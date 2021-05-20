@@ -1,0 +1,22 @@
+# Editor configs
+.idea
+.npmignore
+
+# Exclude files
+node_modules
+.czrc
+.npmrc
+.yarnrc
+yarn.lock
+package-lock.json
+
+# Log files
+yarn-error.log
+npm-debug.log
+
+# Output
+release
+output
+
+# env file
+.env
