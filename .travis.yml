@@ -12,16 +12,14 @@ install:
   - yarn install
 
 script:
-  - node --version
-  - npm --version
   - echo "Testing Started ..."
-  - npm test
+  - yarn test
   - echo "Testing Finished."
 
-  - echo "NPM Deploying Started ..."
+  - echo "Deploying Started ..."
   - npm version
-  - npm run build
-  - echo "NPM Building Finished."
+  - yarn build
+  - echo "Building Finished."
 
 deploy:
   provider: npm
