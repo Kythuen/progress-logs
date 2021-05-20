@@ -1,36 +1,24 @@
-language: node_js
+language: nodejs
 
-node_js:
-  - 12
-
-install:
+before_script:
   - npm install
 
-stages:
-  - test
-  - name: deploy
+script:
+  - node --version
+  - npm --version
+  - echo "Testing Started ..."
+  - npm test
+  - echo "Testing Finished."
 
-jobs:
-  include:
-    - stage: test
-        script:
-          - node --version
-          - npm --version
-          - echo "Testing Started ..."
-          - npm test
-          - echo "Testing Finished."
+  - echo "NPM Deploying Started ..."
+  - npm version
+  - npm run build
+  - echo "NPM Building Finished."
 
-    - stage: deploy
-        script:
-          - echo "NPM Deploying Started ..."
-          - npm version
-          - npm run build
-          - echo "NPM Building Finished."
-
-        deploy:
-          provider: npm
-          email: 616332192@qq.com
-          api_key: "$NPM_TOKEN"
-          skip_cleanup: true
-          on:
-            all_branches: true
+deploy:
+  provider: npm
+  email: 616332192@qq.com
+  api_key: "$NPM_TOKEN"
+  skip_cleanup: true
+  on:
+    all_branches: true
