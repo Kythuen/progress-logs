@@ -3,8 +3,13 @@ language: nodejs
 node_js:
   - 12
 
-before_script:
-  - npm install
+
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- -- version 1.22.0
+  - export PATH="$HOME/.yarn/bin:$PATH"
+
+install:
+  - yarn install
 
 script:
   - node --version
