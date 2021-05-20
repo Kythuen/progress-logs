@@ -104,51 +104,51 @@ describe('Test for progress', () => {
     //         expect(progressLog.queue[5].getPrintMessage()).toEqual(getColorText('[0/6] Title5 [command 5]...', 'gray'))
     //         expect(progressLog.queue[5].getPrintMessage(0)).toEqual(getColorText('❤️[0/6] Title5 [command 5]', 'green'))
     //     })
-    describe('test global options', () => {
-        test('set with string', () => {
-            const progressLog = new TestProgressLog()
-            progressLog.setGlobalLogColor('blue')
-            progressLog.setGlobalLogEmoji('warning')
-
-            progressLog.add('Title0', 'command 0')
-            progressLog.add('Title1', 'command 1')
-            progressLog.add('Title2', 'command 2', { color: 'cyan', emoji: 'heart' })
-            progressLog.add('Title3', 'command 3', { color: { success: 'green' }, emoji: { success: 'heart' } })
-
-            expect(progressLog.queue[0].colorData).toEqual(Object.assign({}, defaultColor, { success: 'blue' }))
-            expect(progressLog.queue[0].getPrintMessage()).toEqual(getColorText('[0/4] Title0 [command 0]...', 'gray'))
-            expect(progressLog.queue[0].getPrintMessage(0)).toEqual(getColorText('⚠️[0/4] Title0 [command 0]', 'blue'))
-
-            expect(progressLog.queue[1].emojiData).toEqual(Object.assign({}, defaultEmoji, { success: 'warning' }))
-            expect(progressLog.queue[1].getPrintMessage()).toEqual(getColorText('[0/4] Title1 [command 1]...', 'gray'))
-            expect(progressLog.queue[1].getPrintMessage(0)).toEqual(getColorText('⚠️[0/4] Title1 [command 1]', 'blue'))
-
-            expect(progressLog.queue[2].colorData).toEqual(Object.assign({}, defaultColor, { success: 'cyan' }))
-            expect(progressLog.queue[2].emojiData).toEqual(Object.assign({}, defaultEmoji, { success: 'heart' }))
-            expect(progressLog.queue[2].getPrintMessage()).toEqual(getColorText('[0/4] Title2 [command 2]...', 'gray'))
-            expect(progressLog.queue[2].getPrintMessage(0)).toEqual(getColorText('❤️[0/4] Title2 [command 2]', 'cyan'))
-
-            expect(progressLog.queue[3].colorData).toEqual(Object.assign({}, defaultColor, { success: 'green' }))
-            expect(progressLog.queue[3].emojiData).toEqual(Object.assign({}, defaultEmoji, { success: 'heart' }))
-            expect(progressLog.queue[3].getPrintMessage()).toEqual(getColorText('[0/4] Title3 [command 3]...', 'gray'))
-            expect(progressLog.queue[3].getPrintMessage(0)).toEqual(getColorText('❤️[0/4] Title3 [command 3]', 'green'))
-
-        })
-        test('set with object', () => {
-            const progressLog = new TestProgressLog()
-            progressLog.setGlobalLogColor({ success: 'blue' })
-            progressLog.setGlobalLogEmoji({ success: 'warning' })
-
-            progressLog.add('Title0', 'command 0')
-            progressLog.add('Title1', 'command 1')
-
-            expect(progressLog.queue[0].colorData).toEqual(Object.assign({}, defaultColor, { success: 'blue' }))
-            expect(progressLog.queue[0].getPrintMessage()).toEqual(getColorText('[0/2] Title0 [command 0]...', 'gray'))
-            expect(progressLog.queue[0].getPrintMessage(0)).toEqual(getColorText('⚠️[0/2] Title0 [command 0]', 'blue'))
-
-            expect(progressLog.queue[1].emojiData).toEqual(Object.assign({}, defaultEmoji, { success: 'warning' }))
-            expect(progressLog.queue[1].getPrintMessage()).toEqual(getColorText('[0/2] Title1 [command 1]...', 'gray'))
-            expect(progressLog.queue[1].getPrintMessage(0)).toEqual(getColorText('⚠️[0/2] Title1 [command 1]', 'blue'))
-        })
-    })
+    // describe('test global options', () => {
+    //     test('set with string', () => {
+    //         const progressLog = new TestProgressLog()
+    //         progressLog.setGlobalLogColor('blue')
+    //         progressLog.setGlobalLogEmoji('warning')
+    //
+    //         progressLog.add('Title0', 'command 0')
+    //         progressLog.add('Title1', 'command 1')
+    //         progressLog.add('Title2', 'command 2', { color: 'cyan', emoji: 'heart' })
+    //         progressLog.add('Title3', 'command 3', { color: { success: 'green' }, emoji: { success: 'heart' } })
+    //
+    //         expect(progressLog.queue[0].colorData).toEqual(Object.assign({}, defaultColor, { success: 'blue' }))
+    //         expect(progressLog.queue[0].getPrintMessage()).toEqual(getColorText('[0/4] Title0 [command 0]...', 'gray'))
+    //         expect(progressLog.queue[0].getPrintMessage(0)).toEqual(getColorText('⚠️[0/4] Title0 [command 0]', 'blue'))
+    //
+    //         expect(progressLog.queue[1].emojiData).toEqual(Object.assign({}, defaultEmoji, { success: 'warning' }))
+    //         expect(progressLog.queue[1].getPrintMessage()).toEqual(getColorText('[0/4] Title1 [command 1]...', 'gray'))
+    //         expect(progressLog.queue[1].getPrintMessage(0)).toEqual(getColorText('⚠️[0/4] Title1 [command 1]', 'blue'))
+    //
+    //         expect(progressLog.queue[2].colorData).toEqual(Object.assign({}, defaultColor, { success: 'cyan' }))
+    //         expect(progressLog.queue[2].emojiData).toEqual(Object.assign({}, defaultEmoji, { success: 'heart' }))
+    //         expect(progressLog.queue[2].getPrintMessage()).toEqual(getColorText('[0/4] Title2 [command 2]...', 'gray'))
+    //         expect(progressLog.queue[2].getPrintMessage(0)).toEqual(getColorText('❤️[0/4] Title2 [command 2]', 'cyan'))
+    //
+    //         expect(progressLog.queue[3].colorData).toEqual(Object.assign({}, defaultColor, { success: 'green' }))
+    //         expect(progressLog.queue[3].emojiData).toEqual(Object.assign({}, defaultEmoji, { success: 'heart' }))
+    //         expect(progressLog.queue[3].getPrintMessage()).toEqual(getColorText('[0/4] Title3 [command 3]...', 'gray'))
+    //         expect(progressLog.queue[3].getPrintMessage(0)).toEqual(getColorText('❤️[0/4] Title3 [command 3]', 'green'))
+    //
+    //     })
+    //     test('set with object', () => {
+    //         const progressLog = new TestProgressLog()
+    //         progressLog.setGlobalLogColor({ success: 'blue' })
+    //         progressLog.setGlobalLogEmoji({ success: 'warning' })
+    //
+    //         progressLog.add('Title0', 'command 0')
+    //         progressLog.add('Title1', 'command 1')
+    //
+    //         expect(progressLog.queue[0].colorData).toEqual(Object.assign({}, defaultColor, { success: 'blue' }))
+    //         expect(progressLog.queue[0].getPrintMessage()).toEqual(getColorText('[0/2] Title0 [command 0]...', 'gray'))
+    //         expect(progressLog.queue[0].getPrintMessage(0)).toEqual(getColorText('⚠️[0/2] Title0 [command 0]', 'blue'))
+    //
+    //         expect(progressLog.queue[1].emojiData).toEqual(Object.assign({}, defaultEmoji, { success: 'warning' }))
+    //         expect(progressLog.queue[1].getPrintMessage()).toEqual(getColorText('[0/2] Title1 [command 1]...', 'gray'))
+    //         expect(progressLog.queue[1].getPrintMessage(0)).toEqual(getColorText('⚠️[0/2] Title1 [command 1]', 'blue'))
+    //     })
+    // })
 })
