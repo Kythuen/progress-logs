@@ -19,7 +19,8 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "build": "tsc",
-        "test": "jest"
+        "test": "jest",
+        "coveralls": "jest --coverage && cat ./test/coverage/lcov.info | coveralls"
     },
     "dependencies": {
         "chalk": "^4.1.1",
@@ -29,6 +30,7 @@
     "devDependencies": {
         "@types/jest": "^26.0.23",
         "@types/node": "^15.0.3",
+        "coveralls": "^3.1.0",
         "jest": "^26.6.3",
         "jest-config": "^26.6.3",
         "ts-jest": "^26.5.6",
