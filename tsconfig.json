@@ -79,6 +79,7 @@
     },
     "exclude": [
         "./test",
-        "./dist"
+        "./dist",
+        "jest.config.ts"
     ]
 }

@@ -1,33 +1,25 @@
-language: node_js
+language: nodejs
 
 node_js:
-  - 12
+  - 12.19.0
 
-stages:
-  - test
-  - name: deploy
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- -- version 1.22.0
+  - export PATH="$HOME/.yarn/bin:$PATH"
 
-jobs:
-  include:
-    - stage: test
-        script:
-          - node --version
-          - npm --version
-          - echo "Testing Started ..."
-          - npm test
-          - echo "Testing Finished."
+install:
+  - yarn install
 
-    - stage: deploy
-        script:
-          - echo "NPM Deploying Started ..."
-          - npm version
-          - npm run build
-          - echo "NPM Building Finished."
+script:
+  - echo "Deploying Started ..."
+  - npm version
+  - yarn build
+  - echo "Building Finished."
 
-        deploy:
-          provider: npm
-          email: 616332192@qq.com
-          api_key: "$NPM_TOKEN"
-          skip_cleanup: true
-          on:
-            all_branches: true
+deploy:
+  provider: npm
+  email: 616332192@qq.com
+  api_key: "$NPM_TOKEN"
+  skip_cleanup: true
+  on:
+    all_branches: true
