@@ -11,10 +11,6 @@ install:
   - yarn install
 
 script:
-  - echo "Testing Started ..."
-  - yarn test
-  - echo "Testing Finished."
-
   - echo "Deploying Started ..."
   - npm version
   - yarn build
