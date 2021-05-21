@@ -20,7 +20,7 @@
     "scripts": {
         "build": "tsc",
         "test": "jest",
-        "coveralls": "jest --coverage && cat ./test/coverage/lcov.info | coveralls"
+        "coveralls": "jest --coverage && coveralls < test/coverage/lcov.info"
     },
     "dependencies": {
         "chalk": "^4.1.1",

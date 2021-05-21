@@ -10,11 +10,11 @@
   <a href="https://www.npmjs.com/package/progress-logs">
     <img alt="NPM Downloads" src="https://img.shields.io/npm/dt/progress-logs.svg">
   </a>
-  <a href='https://coveralls.io/github/Kythuen/progress-logs?branch=main'>
-   <img src='https://coveralls.io/repos/github/Kythuen/progress-logs/badge.svg?branch=main' alt='Coverage Status' /></a> 
   <a href="https://travis-ci.com/Kythuen/progress-logs">
     <img alt="Build Status" src="https://travis-ci.com/Kythuen/progress-logs.svg?branch=main">
   </a>
+  <a href='https://coveralls.io/repos/github/Kythuen/progress-logs'>
+   <img src='https://coveralls.io/repos/github/Kythuen/progress-logs/badge.svg' alt='Coverage Status' /></a> 
 </p>
 
 
