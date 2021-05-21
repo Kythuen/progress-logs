@@ -7,13 +7,14 @@
 </div>
 
 <p align="center">
-  <a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/8733716e2fd7444a0f383a9e5f43779a016bae35ddde4e1cc32a4f90bd9bb775/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f76657273696f6e2d312e322e332d626c7565"><img src="https://camo.githubusercontent.com/8733716e2fd7444a0f383a9e5f43779a016bae35ddde4e1cc32a4f90bd9bb775/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f76657273696f6e2d312e322e332d626c7565" alt="version" data-canonical-src="https://img.shields.io/badge/version-0.0.1-blue" style="max-width:100%;"></a>
+  <a target="_blank" rel="noopener noreferrer" href="https://www.npmjs.com/package/progress-logs/v/0.0.1"><img src="https://img.shields.io/badge/version-0.0.1-blue" alt="version" style="max-width:100%;"></a>
   <a href="https://www.npmjs.com/package/progress-logs">
-    <img alt="NPM Downloads" src="https://img.shields.io/npm/dt/progress-log.svg">
+    <img alt="NPM Downloads" src="https://img.shields.io/npm/dt/progress-logs.svg">
   </a>
-  <a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/a91b4f5528c26920b6b8fa617267a7193a5bddd70a4d013dcf616c91af39fc22/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f7665726167652d38302532352d79656c6c6f77677265656e"><img src="https://camo.githubusercontent.com/a91b4f5528c26920b6b8fa617267a7193a5bddd70a4d013dcf616c91af39fc22/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f7665726167652d38302532352d79656c6c6f77677265656e" alt="coverage" data-canonical-src="https://img.shields.io/badge/coverage-80%25-yellowgreen" style="max-width:100%;"></a>
-  <a href="https://travis-ci.com/klaussinani/progress-logs">
-    <img alt="Build Status" src="https://travis-ci.com/kythuen/progress-log.svg?branch=master">
+  <a href='https://coveralls.io/github/Kythuen/progress-logs?branch=main'>
+   <img src='https://coveralls.io/repos/github/Kythuen/progress-logs/badge.svg?branch=main' alt='Coverage Status' /></a> 
+  <a href="https://travis-ci.com/Kythuen/progress-logs">
+    <img alt="Build Status" src="https://travis-ci.com/Kythuen/progress-logs.svg?branch=main">
   </a>
 </p>
 
